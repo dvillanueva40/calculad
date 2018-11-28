@@ -15,15 +15,23 @@ public class hexadecimales {
 		double suma = A+B;
 		System.out.println("La suma numerica es "+suma);
 		
+		int x = (int)(suma);  
+		
+		char Hex[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+        String hexadecimal = "";
+        int resto, aux = x;
+         
+        while(aux>0){
+            resto = aux % 16;
+            hexadecimal = Hex[resto] + hexadecimal;
+            aux /= 16; 
+        }
+		
+		System.out.println("La suma hexadecimal es "+hexadecimal);
 		
 		
-		String h = Double.toHexString(suma);
 		
-		System.out.println("La suma hexadecimal es "+hex);
-		
-		
-
-
+		variable.close();
 	}
 
 }
