@@ -15,7 +15,9 @@ public class hexadecimales {
 		double suma = A+B;
 		System.out.println("La suma numerica es "+suma);
 		
-		int hex=(int)(suma);	
+		
+		
+		String h = Double.toHexString(suma);
 		
 		System.out.println("La suma hexadecimal es "+hex);
 		
