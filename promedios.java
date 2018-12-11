@@ -9,40 +9,68 @@ public class promedios {
 		
 		// TODO Auto-generated method stub
 		
+		Scanner variable=new Scanner(System.in);
+		System.out.println("Ingrese cantidad de alumnos: ");
+		int alumnos=variable.nextInt();
 		
-		Scanner sed =  new Scanner(System.in);
-		int alumnos;
-		int n=0;
-        double notas;
-        double nota;
-        double suma;
-        double prom=0; 
-        System.out.println("Ingrese cantidad de alumnos: ");
-        alumnos=sed.nextInt();
-        
-		int[][] integer=null;
-		int[]curso=integer [alumnos];
-		for (int h=0;h<=alumnos;h++){
-        System.out.print("ingrese cantidad de notas alumno 1 :");//rango entre 10 y 70
-        notas = sed.nextInt();
-        
-        
-        	for(int i=1; i<= notas; i++){
-        		System.out.println("ingrese nota"+" "+i+" "+"de"+" "+notas+":");
-
-        		nota = sed.nextInt();  
-            
-        		suma = 0;
-                 
-        		suma = suma + nota;
-        		prom= prom + suma /notas;
-        		if (nota>70){System.out.println("error");          
-        		}
-        		else{System.out.println("promedio:"+prom );}
-            	}
-        
-		}           
-  }     
+		for(int k=1;k<=alumnos;k++){
+			System.out.println("Para alumno N° "+k+"\n");
+			Scanner sed =  new Scanner(System.in);
+	        int notas;
+	        double nota;
+	        double suma;
+	        double prom=0;
+	 
+	        System.out.print("ingrese cantidad de notas:"+"\n"); //rango entre 10 y 70
+	        notas = sed.nextInt();
+	        
+	        System.out.println("¿Desea ponderar las notas?");
+	        
+	        System.out.println("(1)Si");
+	        
+	        System.out.println("(2)No");
+	        int p=variable.nextInt();
+	        
+	        if(p==2) {
+	       
+	        
+	        for(int i=1; i<= notas; i++){
+	            System.out.println("ingrese nota"+" "+i+" "+"de"+" "+notas+":");
+	            
+	            nota = sed.nextInt();  
+	            
+	            suma = 0;
+	                 
+	            suma = suma + nota;
+	            prom= prom + suma /notas;
+	             if (nota>70.0){System.out.println("error");
+	             break;
+	             }
+	        else{System.out.println("promedio de alumno "+k+": es "+prom+"\n" );}
+	            } 
+	        }
+	        if(p==1) {
+	        	for( int s=1;s<=notas;s++) {
+	        		System.out.println("ingrese nota "+s);
+	        		s=variable.nextInt();
+	        		System.out.println("Indique ponderacion nota "+s);	        		
+	        		double ponderacion = 0;
+	        		ponderacion=variable.nextDouble();
+	        		double ponderado=0;
+	        		ponderado=(s*ponderacion)/100;
+	        		double promedio=0;
+	        		promedio=ponderado+ponderado;
+	        		System.out.println("el promedio es: "+promedio);
+	        		
+	        	}
+	        }
+			}
+			
+		
+		variable.close();
+		
+	}
 
 }
 
+		
