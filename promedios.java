@@ -9,7 +9,7 @@ public class promedios {
 		
 		// TODO Auto-generated method stub
 		
-		Scanner variable=new Scanner(System.in);
+			Scanner variable=new Scanner(System.in);
 		System.out.println("Ingrese cantidad de alumnos: ");
 		int alumnos=variable.nextInt();
 		
@@ -51,18 +51,15 @@ public class promedios {
 	        }
 	        if(p==1) {
 	        	for( int s=1;s<=notas;s++) {
-	        		System.out.println("ingrese nota "+s);
-	        		s=variable.nextInt();
+	        		System.out.println("ingrese nota "+s+" de "+notas);
+	        		int n=variable.nextInt();
 	        		System.out.println("Indique ponderacion nota "+s);	        		
 	        		double ponderacion = 0;
 	        		ponderacion=variable.nextDouble();
-	        		double ponderado=0;
-	        		ponderado=(s*ponderacion)/100;
-	        		double promedio=0;
-	        		promedio=ponderado+ponderado;
-	        		System.out.println("el promedio es: "+promedio);
+	        			        		
+	        		double ponderado = n*(ponderacion/100);	
 	        		
-	        	}
+	        	}	        	
 	        }
 			}
 			
@@ -72,5 +69,3 @@ public class promedios {
 	}
 
 }
-
-		
